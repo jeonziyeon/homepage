@@ -1,0 +1,164 @@
+/* 전체 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+/* 로고 이미지 스타일 */
+.logo {
+  display: block;
+  margin: 30px auto;
+  }
+  
+
+  /* body 스타일 */
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+
+
+  /* 네비게이션 바 스타일 */
+  .navbar {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* 변경: 너비를 100%로 설정 */
+    height: 100px;
+    align-items: center;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    width: 100%; /* 변경: 너비를 100%로 설정 */
+  }
+  
+  .menu-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+  
+
+  
+
+  
+ /*갤러리 스타일*/
+ .portfolio {
+    display: block;
+    margin: auto;
+  }
+
+  .gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .gallery-item {
+    flex-basis: calc(30%); /* 간격을 고려하지 않으므로 -75px 삭제 */
+    max-width: calc(30%); /* 간격을 고려하지 않으므로 -75px 삭제 */
+    margin: 0; /* 이 부분 수정 */
+}
+
+.gallery-item img {
+  width: 70%;
+  height: auto;
+}
+
+
+
+  /* 반응형 스타일 */
+  @media (max-width: 768px) {
+    .navbar-nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar-nav .nav-item {
+      margin-bottom: 10px;
+    }
+  }
+  
+
+
+/*카피라이트 이미지 스타일*/
+.copyright {
+display: block;
+margin: 30px auto;
+}
+
+
+
+window.onload = function() {
+    // 큰 이미지 요소 선택
+    var bigImage = document.querySelector('img[src="img/whatsyourname.jpg"]');
+  
+    // 큰 이미지로 스크롤
+    window.scrollTo({
+      top: bigImage.offsetTop,
+      behavior: 'smooth' // 스크롤 행동을 'smooth'(부드럽게)로 설정
+    });
+  };
+
+
+
+  .about-text {
+    font-size: 15px; /* 글자 크기 조정 */
+    color: #aaa9a9; /* 텍스트 색상 조정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    line-height: 4;  /* 원하는 값으로 수정하세요 */
+    
+  }
+  
+  @media (min-width: 768px) {
+    .about-text {
+      padding-top:30px;
+      color: #aaa9a9;
+      font-size: 15px; /* 화면의 너비가 768px 이상일 때의 글자 크기 조정 */
+      text-align: center;
+      line-height: 2;  /* 원하는 값으로 수정하세요 */
+    }
+  }
+  
+  .highlight {
+    color: #6f6f6f; /* 원하는 색상의 HEX 코드 */
+}
+
+
+.sns-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0px 200px 0px;
+}
+
+.sns-links .row {
+  display: flex;
+  justify-content: center;
+}
+
+.sns-links .row a {
+  margin: 30px 50px; /* 이미지 사이의 간격을 조절합니다. 필요에 따라 조정하세요. */
+}
+
+.container {
+  color: #559d2d;
+  text-align: center;
+  margin: 0px 0px 100px 0px;
+}
+
+.container2 {
+  text-align: center;
+  margin: 70px 0px 100px 0px;
+}
