@@ -9,7 +9,8 @@
 /* 로고 이미지 스타일 */
 .logo {
   display: block;
-  margin: 30px auto;
+  margin: 50px auto 30px auto;
+  text-align: center;
   }
   
 
@@ -25,16 +26,17 @@
     display: flex;
     justify-content: center;
     width: 100%; /* 변경: 너비를 100%로 설정 */
-    height: 100px;
+    height: 220px;
     align-items: center;
   }
+
   
   .navbar-nav {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
-    padding: 0;
+    padding: 50px 0px 0px 0px;
     list-style-type: none;
     text-align: center;
     width: 100%; /* 변경: 너비를 100%로 설정 */
@@ -52,43 +54,82 @@
 
   
  /*갤러리 스타일*/
- .portfolio {
-    display: block;
-    margin: auto;
-  }
 
-  .gallery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  .gallery-item {
-    flex-basis: calc(30%); /* 간격을 고려하지 않으므로 -75px 삭제 */
-    max-width: calc(30%); /* 간격을 고려하지 않으므로 -75px 삭제 */
-    margin: 0; /* 이 부분 수정 */
+ .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* 이미지 간격 조정 */
+  max-width: 1300px; /* 갤러리의 최대 너비 설정 */
+  margin: 0 auto; /* 갤러리를 중앙으로 배치 */
 }
 
+
+
+.gallery-item {
+  flex-basis: calc(33.33% - 10px); /* 간격을 고려하여 너비 설정. 간격을 필요에 따라 조절하세요 */
+  max-width: calc(33.33% - 10px); /* 간격을 고려하여 너비 설정. 간격을 필요에 따라 조절하세요 */
+  margin: 0px 0px 55px 0px; /* 간격 설정. 필요에 따라 조절하세요 */
+}
+
+
 .gallery-item img {
-  width: 70%;
+  width: 90%;
   height: auto;
 }
 
 
 
-  /* 반응형 스타일 */
-  @media (max-width: 768px) {
-    .navbar-nav {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .navbar-nav .nav-item {
-      margin-bottom: 10px;
-    }
+ /* 반응형 스타일 */
+ @media (max-width: 768px) {
+  .navbar {
+    margin-top: 100px; /* 로고와의 간격 */
+    margin-bottom: 25px;
   }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center; /* 추가: 메뉴 가운데 정렬 */
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
+}
+
   
+
+@media (min-width: 768px) {
+    .about-text {
+    padding-top:30px;
+    color: #aaa9a9;
+    font-size: 15px; /* 화면의 너비가 768px 이상일 때의 글자 크기 조정 */
+    text-align: center;
+    line-height: 2;  /* 원하는 값으로 수정하세요 */
+    }
+}
+  
+
+  /* 화면 크기가 700px 이하일 때 적용될 gallery-item 스타일 */
+@media (max-width: 700px) {
+  .gallery-item {
+    flex-basis: 100%; /* 100%로 설정하면 한 줄에 하나의 이미지만 표시됩니다. */
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+
+/* 화면 크기가 400px 이하일 때 적용될 gallery-item img 스타일 */
+@media (max-width: 400px) {
+  .gallery-item img {
+    max-width: 400px; /* 이미지의 최대 너비를 700px로 제한합니다. */
+    width: 90%; /* 이미지의 너비를 부모 요소의 90%로 설정합니다. */
+    height: auto; /* 이미지의 높이를 자동으로 설정합니다. */
+    text-align: center;
+  }
+}
+
+
 
 
 /*카피라이트 이미지 스타일*/
@@ -112,24 +153,15 @@ window.onload = function() {
 
 
 
-  .about-text {
+.about-text {
     font-size: 15px; /* 글자 크기 조정 */
     color: #aaa9a9; /* 텍스트 색상 조정 */
     text-align: center; /* 텍스트 중앙 정렬 */
     line-height: 4;  /* 원하는 값으로 수정하세요 */
     
-  }
+}
   
-  @media (min-width: 768px) {
-    .about-text {
-      padding-top:30px;
-      color: #aaa9a9;
-      font-size: 15px; /* 화면의 너비가 768px 이상일 때의 글자 크기 조정 */
-      text-align: center;
-      line-height: 2;  /* 원하는 값으로 수정하세요 */
-    }
-  }
-  
+ 
   .highlight {
     color: #6f6f6f; /* 원하는 색상의 HEX 코드 */
 }
@@ -161,4 +193,10 @@ window.onload = function() {
 .container2 {
   text-align: center;
   margin: 70px 0px 100px 0px;
+}
+
+
+
+.whatsyourname-background {
+  background-color: #559d2d;
 }
