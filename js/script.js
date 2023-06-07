@@ -86,3 +86,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
   }, 0);
 });
+
+
+
+window.onload = function() {
+  // 큰 이미지 요소 선택
+  var bigImage = document.querySelector('img[src="img/whatsyourname.jpg"]');
+
+  // 큰 이미지로 스크롤
+  window.scrollTo({
+    top: bigImage.offsetTop,
+    behavior: 'smooth' // 스크롤 행동을 'smooth'(부드럽게)로 설정
+  });
+};
